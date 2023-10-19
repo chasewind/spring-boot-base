@@ -7,13 +7,36 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>spring-boot-gateway</artifactId>
+  <packaging>jar</packaging>
+
   <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-gateway</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-web</artifactId>
+        </exclusion>
+
+      </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.apache.commons</groupId>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-loadbalancer</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.deer</groupId>
+      <artifactId>spring-boot-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
     </dependency>
     <dependency>
@@ -21,4 +44,12 @@
       <artifactId>commons-lang3</artifactId>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 </project>

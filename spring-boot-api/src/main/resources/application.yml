@@ -1,0 +1,8 @@
+demo:
+  micro-service:
+    biz:
+      address: http://127.0.0.1:8084
+    front:
+      address: http://127.0.0.1:8082
+    backend:
+      address: http://127.0.0.1:8083

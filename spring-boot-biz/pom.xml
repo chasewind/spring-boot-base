@@ -9,7 +9,23 @@
   <artifactId>spring-boot-biz</artifactId>
   <dependencies>
     <dependency>
-      <groupId>org.apache.commons</groupId>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+
+    <dependency>
+      <groupId>com.deer</groupId>
+      <artifactId>spring-boot-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
     </dependency>
     <dependency>
@@ -17,4 +33,13 @@
       <artifactId>commons-lang3</artifactId>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+
+  </build>
 </project>
